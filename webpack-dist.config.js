@@ -10,7 +10,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { WebPlugin } = require('web-webpack-plugin');
 const ghpages = require('gh-pages');
 
-function publishGhPages() {
+function publishGhPages () {
   return new Promise((resolve, reject) => {
     ghpages.publish(outputPath, { dotfiles: true }, (err) => {
       if (err) {

@@ -3,7 +3,7 @@
 
 $color-gray: #d1d1d1;
 $color-green: #00b38a;
-$font-family: 'Helvetica Neue', Helvetica, Arial, "Microsoft YaHei", sans-serif;
+$font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
 
 * {
   @include box-sizing(border-box);
@@ -28,7 +28,7 @@ body {
 a {
   text-decoration: none;
   color: $color-green;
-  @include transition(all .2s ease-in-out);
+  @include transition(all 0.2s ease-in-out);
 }
 
 .last-modified {
@@ -113,7 +113,8 @@ a {
   .name {
     float: left;
     h1 {
-      font-family: "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", $font-family;
+      font-family: "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3",
+        $font-family;
       font-weight: 500;
       letter-spacing: 5px;
       @media screen and (max-width: 720px) {
@@ -153,7 +154,8 @@ a {
   }
   .info {
     float: left;
-    line-height: 22px;
+    line-height: 26px;
+    font-size: 16px;
   }
   .contact {
     float: right;
@@ -175,7 +177,8 @@ a {
           @media print {
             color: #000;
           }
-          font-family: "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", $font-family;
+          font-family: "Lucida Grande", "Hiragino Sans GB",
+            "Hiragino Sans GB W3", $font-family;
           font-size: 14px;
           line-height: 22px;
           &:hover {
@@ -209,7 +212,7 @@ a {
   }
   .content-left,
   .content-right {
-    width: 50%;
+    width: 100%;
     @media screen and (max-width: 1024px) {
       width: 100%;
     }
@@ -234,6 +237,7 @@ a {
     overflow: hidden;
     ul {
       li {
+        font-size: 16px;
         margin-top: 8px;
         list-style: square inside;
       }
@@ -241,6 +245,32 @@ a {
 
     .item {
       margin-bottom: 20px;
+
+      .h4 {
+        position: relative;
+        z-index: 1;
+        min-width: 100px;
+        padding: 4px 10px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: left;
+      }
+      .h5 {
+        position: relative;
+        z-index: 1;
+        min-width: 100px;
+        padding: 4px 10px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: left;
+      }
+      .text {
+        font-size: 15px;
+        font-weight: 400;
+        &.pl60 {
+          padding-left: 60px;
+        }
+      }
     }
   }
   .section-title-l,
@@ -262,15 +292,15 @@ a {
   .section-title {
     position: relative;
     z-index: 1;
-    width: 24%;
+    // width: 24%;
     min-width: 100px;
-    margin: 0 auto;
+    // margin: 0 auto;
     padding: 4px 10px;
     @include border-radius(32px);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
-    text-align: center;
-    background-color: #eee;
+    text-align: left;
+    // background-color: #eee;
   }
   .section-list {
     padding: 10px 0 5px;
